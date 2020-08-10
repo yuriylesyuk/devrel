@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Delete KVM
+# https://apidocs.apigee.com/management/apis/delete/organizations/%7Borg_name%7D/environments/%7Benv_name%7D/keyvaluemaps/%7Bmap_name%7D 
+
+curl \
+  -X DELETE \
+  -H "Authorization: Bearer $TOKEN" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/environments/$APIGEE_ENV/keyvaluemaps/$APIGEE_KVM"
+

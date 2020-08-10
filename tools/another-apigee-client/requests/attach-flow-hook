@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Attach Flow Hook
+# https://apidocs.apigee.com/shared-flow-api/apis/put/organizations/%7Borg_name%7D/environments/%7Benv_name%7D/flowhooks/%7Bflow_hook%7D
+
+curl \
+  -X PUT \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/xml" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/environments/$APIGEE_ENV/flowhooks/$APIGEE_FLOW_HOOK" \
+  -d "<FlowHook><SharedFlow>$APIGEE_SHARED_FLOW</SharedFlow></FlowHook>"

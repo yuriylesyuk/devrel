@@ -4,6 +4,8 @@ SCRIPT=`readlink -f "$0"`
 SCRIPTPATH=`dirname "$SCRIPT"`
 
 # read required APIGEE_ vars from aac-token, chosen request 
+# if -q then error if any are missing
+# else prompt for all, using env vars as default
 
 REQUEST_TYPE=$1
 

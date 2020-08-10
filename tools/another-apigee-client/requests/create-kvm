@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Create KVM
+# https://apidocs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/environments/%7Benv_name%7D/keyvaluemaps
+
+curl \
+  -X POST \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/environments/$APIGEE_ENV/keyvaluemaps" \
+  -d @$APIGEE_KVM

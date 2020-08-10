@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Create Company
+# https://apidocs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/companies
+
+curl \
+  -X POST \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/xml" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/companies" \
+  -d @$APIGEE_COMPANY

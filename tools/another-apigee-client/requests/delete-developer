@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Delete Developer
+# https://apidocs.apigee.com/docs/management/apis/delete/organizations/%7Borg_name%7D/developers/management/apis/delete/organizations/%7Borg_name%7D/developers/%7Bdeveloper_email_or_id%7D 
+
+curl \
+  -X DELETE \
+  -H "Authorization: Bearer $TOKEN" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/developers/$APIGEE_DEVELOPER"
+

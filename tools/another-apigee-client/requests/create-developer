@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Create Developer
+# https://apidocs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/developers
+
+curl \
+  -X POST \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/xml" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/developers" \
+  -d @$APIGEE_DEVELOPER

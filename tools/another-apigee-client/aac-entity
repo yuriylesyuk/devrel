@@ -1,0 +1,3 @@
+#!/bin/sh
+
+# copy file from ./entities/x to x.xml

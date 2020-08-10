@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Detach Flow Hook
+# https://apidocs.apigee.com/shared-flow-api/apis/delete/organizations/%7Borg_name%7D/environments/%7Benv_name%7D/flowhooks/%7Bflow_hook%7D 
+
+curl \
+  -X DELETE \
+  -H "Authorization: Bearer $TOKEN" \
+  "https://api.enterprise.apigee.com/v1/organizations/$APIGEE_ORG/environments/$APIGEE_ENV/flowhooks/$APIGEE_FLOW_HOOK"
+
